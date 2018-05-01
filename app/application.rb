@@ -20,10 +20,11 @@ class Application
       else
       @@cart.each do |c|
         resp.write "#{c}\n"
+      end
     end
     else
       resp.write "Path Not Found"
-    end
+    
       end
     resp.finish
   end
