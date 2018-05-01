@@ -11,20 +11,19 @@ class Application
       @@items.each do |item|
         resp.write "#{item}\n"
     end
-    elsif req.path.match(/search/)
-      search_term = req.params["q"]
-      resp.write handle_search(search_term)
-    elsif req.path.match(/cart/)
-      if @@cart.empty?
-        resp.write "Your cart is empty"
-      else
-      @@cart.each do |c|
-        resp.write "#{c}\n"
+      elsif req.path.match(/search/)
+        search_term = req.params["q"]
+        resp.write handle_search(search_term)
+      elsif req.path.match(/cart/)
+        if @@cart.empty?
+          resp.write "Your cart is empty"
+        else
+        @@cart.each do |c|
+          resp.write "#{c}\n"
+        end
       end
-    end
-    else
-      resp.write "Path Not Found"
-    
+        else
+        resp.write "Path Not Found"
       end
     resp.finish
   end
