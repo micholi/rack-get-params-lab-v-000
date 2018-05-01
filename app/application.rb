@@ -28,7 +28,7 @@ class Application
   #    @@cart.each do |c|
   #      resp.write "#{c}\n"
 
-  #  end
+    end
 
       end
     resp.finish
