@@ -24,12 +24,11 @@ class Application
     end
 
     #new code here?
-    if req.path.match(/cart/)
-      @@cart.each do |c|
-        resp.write "#{c}\n"
-    else
-      resp.write "Your cart is empty"
-    end
+  #  if req.path.match(/cart/)
+  #    @@cart.each do |c|
+  #      resp.write "#{c}\n"
+
+  #  end
 
       end
     resp.finish
